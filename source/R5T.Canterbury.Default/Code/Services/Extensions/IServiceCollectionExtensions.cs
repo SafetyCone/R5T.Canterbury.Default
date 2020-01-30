@@ -12,7 +12,7 @@ namespace R5T.Canterbury.Default
         /// <summary>
         /// Adds the <see cref="CDriveNameConvention"/> implementation of <see cref="ICDriveNameConvention"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
-        public static IServiceCollection AddCDriveNameConvention(this IServiceCollection services)
+        public static IServiceCollection AddDefaultCDriveNameConvention(this IServiceCollection services)
         {
             services.AddSingleton<ICDriveNameConvention, CDriveNameConvention>();
 
@@ -22,9 +22,9 @@ namespace R5T.Canterbury.Default
         /// <summary>
         /// Adds the <see cref="CDriveNameConvention"/> implementation of <see cref="ICDriveNameConvention"/> as a <see cref="ServiceLifetime.Singleton"/>.
         /// </summary>
-        public static ServiceAction<ICDriveNameConvention> AddCDriveNameConventionAction(this IServiceCollection services)
+        public static ServiceAction<ICDriveNameConvention> AddDefaultCDriveNameConventionAction(this IServiceCollection services)
         {
-            var serviceAction = new ServiceAction<ICDriveNameConvention>(() => services.AddCDriveNameConvention());
+            var serviceAction = new ServiceAction<ICDriveNameConvention>(() => services.AddDefaultCDriveNameConvention());
             return serviceAction;
         }
     }
