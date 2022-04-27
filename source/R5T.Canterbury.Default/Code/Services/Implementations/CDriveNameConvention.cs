@@ -1,9 +1,9 @@
-﻿using System;
+using System;using R5T.T0064;
 
 
 namespace R5T.Canterbury.Default
-{
-    public class CDriveNameConvention : ICDriveNameConvention
+{[ServiceImplementationMarker]
+    public class CDriveNameConvention : ICDriveNameConvention,IServiceImplementation
     {
         public const string CDriveName = "C:";
 
